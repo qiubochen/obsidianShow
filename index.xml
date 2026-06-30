@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<rss version="2.0">
+    <channel>
+      <title>投研知识库</title>
+      <link>https://qiubochen.github.io/obsidianShow</link>
+      <description>Last 10 notes on 投研知识库</description>
+      <generator>Quartz -- quartz.jzhao.xyz</generator>
+      <item>
+    <title>concepts</title>
+    <link>https://qiubochen.github.io/obsidianShow/wiki/concepts/</link>
+    <guid>https://qiubochen.github.io/obsidianShow/wiki/concepts/</guid>
+    <description><![CDATA[  ]]></description>
+    <pubDate>Tue, 30 Jun 2026 10:49:23 GMT</pubDate>
+  </item><item>
+    <title>entities</title>
+    <link>https://qiubochen.github.io/obsidianShow/wiki/entities/</link>
+    <guid>https://qiubochen.github.io/obsidianShow/wiki/entities/</guid>
+    <description><![CDATA[  ]]></description>
+    <pubDate>Tue, 30 Jun 2026 10:49:23 GMT</pubDate>
+  </item><item>
+    <title>sources</title>
+    <link>https://qiubochen.github.io/obsidianShow/wiki/sources/</link>
+    <guid>https://qiubochen.github.io/obsidianShow/wiki/sources/</guid>
+    <description><![CDATA[  ]]></description>
+    <pubDate>Tue, 30 Jun 2026 10:49:23 GMT</pubDate>
+  </item><item>
+    <title>ai算力</title>
+    <link>https://qiubochen.github.io/obsidianShow/tags/ai%E7%AE%97%E5%8A%9B</link>
+    <guid>https://qiubochen.github.io/obsidianShow/tags/ai%E7%AE%97%E5%8A%9B</guid>
+    <description><![CDATA[  ]]></description>
+    <pubDate>Tue, 30 Jun 2026 10:49:23 GMT</pubDate>
+  </item><item>
+    <title>数据中心</title>
+    <link>https://qiubochen.github.io/obsidianShow/tags/%E6%95%B0%E6%8D%AE%E4%B8%AD%E5%BF%83</link>
+    <guid>https://qiubochen.github.io/obsidianShow/tags/%E6%95%B0%E6%8D%AE%E4%B8%AD%E5%BF%83</guid>
+    <description><![CDATA[  ]]></description>
+    <pubDate>Tue, 30 Jun 2026 10:49:23 GMT</pubDate>
+  </item><item>
+    <title>半导体</title>
+    <link>https://qiubochen.github.io/obsidianShow/tags/%E5%8D%8A%E5%AF%BC%E4%BD%93</link>
+    <guid>https://qiubochen.github.io/obsidianShow/tags/%E5%8D%8A%E5%AF%BC%E4%BD%93</guid>
+    <description><![CDATA[  ]]></description>
+    <pubDate>Tue, 30 Jun 2026 10:49:23 GMT</pubDate>
+  </item><item>
+    <title>投资主线</title>
+    <link>https://qiubochen.github.io/obsidianShow/tags/%E6%8A%95%E8%B5%84%E4%B8%BB%E7%BA%BF</link>
+    <guid>https://qiubochen.github.io/obsidianShow/tags/%E6%8A%95%E8%B5%84%E4%B8%BB%E7%BA%BF</guid>
+    <description><![CDATA[  ]]></description>
+    <pubDate>Tue, 30 Jun 2026 10:49:23 GMT</pubDate>
+  </item><item>
+    <title>ai芯片</title>
+    <link>https://qiubochen.github.io/obsidianShow/tags/ai%E8%8A%AF%E7%89%87</link>
+    <guid>https://qiubochen.github.io/obsidianShow/tags/ai%E8%8A%AF%E7%89%87</guid>
+    <description><![CDATA[  ]]></description>
+    <pubDate>Tue, 30 Jun 2026 10:49:23 GMT</pubDate>
+  </item><item>
+    <title>gpu</title>
+    <link>https://qiubochen.github.io/obsidianShow/tags/gpu</link>
+    <guid>https://qiubochen.github.io/obsidianShow/tags/gpu</guid>
+    <description><![CDATA[  ]]></description>
+    <pubDate>Tue, 30 Jun 2026 10:49:23 GMT</pubDate>
+  </item><item>
+    <title>asic</title>
+    <link>https://qiubochen.github.io/obsidianShow/tags/asic</link>
+    <guid>https://qiubochen.github.io/obsidianShow/tags/asic</guid>
+    <description><![CDATA[  ]]></description>
+    <pubDate>Tue, 30 Jun 2026 10:49:23 GMT</pubDate>
+  </item>
+    </channel>
+  </rss>

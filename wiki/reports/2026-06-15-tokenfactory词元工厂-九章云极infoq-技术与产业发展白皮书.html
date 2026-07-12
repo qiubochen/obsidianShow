@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="zh" dir="ltr"><head><title>2026-06-15-TokenFactory词元工厂-九章云极InfoQ-技术与产业发展白皮书</title><meta charset="utf-8"/><link rel="preload" href="../../index-47d9ba67.css" as="style"/><link rel="preload" href="../../prescript-2bfc6315.js" as="script"/><link rel="preconnect" href="https://fonts.googleapis.com"/><link rel="preconnect" href="https://fonts.gstatic.com"/><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Schibsted Grotesk:wght@400;700&amp;family=Source Sans Pro:ital,wght@0,400;0,600;1,400;1,600&amp;family=IBM Plex Mono:wght@400;600&amp;display=swap"/><link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin="anonymous"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/><meta name="og:site_name" content="投研知识库"/><meta property="og:title" content="2026-06-15-TokenFactory词元工厂-九章云极InfoQ-技术与产业发展白皮书"/><meta property="og:type" content="website"/><meta name="twitter:card" content="summary_large_image"/><meta name="twitter:title" content="2026-06-15-TokenFactory词元工厂-九章云极InfoQ-技术与产业发展白皮书"/><meta name="twitter:description" content="九章云极 DataCanvas &amp; InfoQ·Token经济：Token Factory（词元工厂）技术与产业发展白皮书（2026-06） ⚠️ 本报告由九章云极 DataCanvas 与 InfoQ 联合出品，属于产业机构白皮书而非持牌卖方研究；行业数据多引自公开资料与第三方预测，九章智算云案例为厂商自述，可信度与可复现性需自行判断。原文仅标“2026 年 6 月”，本卡以 6 月 15 日作为时间线占位，并非精确发布日期。 一句话论点 九章云极 DataCanvas 与 InfoQ 认为，AI 产业的评价尺度正从 GPU 数量与峰值 FLOPS 转向“单位电力可生产多少高质量 T..."/><meta property="og:description" content="九章云极 DataCanvas &amp; InfoQ·Token经济：Token Factory（词元工厂）技术与产业发展白皮书（2026-06） ⚠️ 本报告由九章云极 DataCanvas 与 InfoQ 联合出品，属于产业机构白皮书而非持牌卖方研究；行业数据多引自公开资料与第三方预测，九章智算云案例为厂商自述，可信度与可复现性需自行判断。原文仅标“2026 年 6 月”，本卡以 6 月 15 日作为时间线占位，并非精确发布日期。 一句话论点 九章云极 DataCanvas 与 InfoQ 认为，AI 产业的评价尺度正从 GPU 数量与峰值 FLOPS 转向“单位电力可生产多少高质量 T..."/><meta property="og:image:alt" content="九章云极 DataCanvas &amp; InfoQ·Token经济：Token Factory（词元工厂）技术与产业发展白皮书（2026-06） ⚠️ 本报告由九章云极 DataCanvas 与 InfoQ 联合出品，属于产业机构白皮书而非持牌卖方研究；行业数据多引自公开资料与第三方预测，九章智算云案例为厂商自述，可信度与可复现性需自行判断。原文仅标“2026 年 6 月”，本卡以 6 月 15 日作为时间线占位，并非精确发布日期。 一句话论点 九章云极 DataCanvas 与 InfoQ 认为，AI 产业的评价尺度正从 GPU 数量与峰值 FLOPS 转向“单位电力可生产多少高质量 T..."/><meta property="twitter:domain" content="qiubochen.github.io/obsidianShow"/><meta property="og:url" content="https://qiubochen.github.io/obsidianShow/wiki/reports/2026-06-15-tokenfactory词元工厂-九章云极infoq-技术与产业发展白皮书"/><meta property="twitter:url" content="https://qiubochen.github.io/obsidianShow/wiki/reports/2026-06-15-tokenfactory词元工厂-九章云极infoq-技术与产业发展白皮书"/><link rel="icon" href="../../static/icon.png"/><meta name="description" content="九章云极 DataCanvas &amp; InfoQ·Token经济：Token Factory（词元工厂）技术与产业发展白皮书（2026-06） ⚠️ 本报告由九章云极 DataCanvas 与 InfoQ 联合出品，属于产业机构白皮书而非持牌卖方研究；行业数据多引自公开资料与第三方预测，九章智算云案例为厂商自述，可信度与可复现性需自行判断。原文仅标“2026 年 6 月”，本卡以 6 月 15 日作为时间线占位，并非精确发布日期。 一句话论点 九章云极 DataCanvas 与 InfoQ 认为，AI 产业的评价尺度正从 GPU 数量与峰值 FLOPS 转向“单位电力可生产多少高质量 T..."/><meta name="generator" content="Quartz"/><link href="../../index-47d9ba67.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../component-735924e0.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../component-589c1cea.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../component-bbc3f7c0.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../component-2911f5d1.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../component-e427079e.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../component-53b25b2b.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../component-c93c6a44.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../component-8a06014f.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../component-77d6a441.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../component-6ee21cee.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../component-1ea6ad18.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../component-34bdfded.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../component-788c9ca3.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../component-642859cd.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../component-4abc06bd.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../component-274a3dfe.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../component-94cb6c84.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../component-58d5ff56.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../component-9f9b2774.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../component-7262b5a7.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../static/resource-style-a12dcaa2.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../static/resource-style-26a99b87.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../static/resource-style-a5c806d2.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../static/resource-style-6bd36952.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../static/resource-style-9857b007.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../static/resource-style-d3a1a224.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css" rel="stylesheet" type="text/css" data-persist="true"/><script src="../../prescript-2bfc6315.js" type="application/javascript" data-persist="true"></script><script type="application/javascript" data-persist="true">const fetchData = fetch("../../static/contentIndex.json").then(data => data.json())</script><link rel="preconnect" href="https://fonts.googleapis.com"/><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous"/><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Schibsted%20Grotesk%3Awght%40400%3B700&amp;family=Source%20Sans%20Pro%3Aital%2Cwght%400%2C400%3B0%2C600%3B1%2C400%3B1%2C600&amp;family=IBM%20Plex%20Mono%3Awght%40400%3B600&amp;display=swap"/><meta property="og:image:width" content="1200"/><meta property="og:image:height" content="630"/><meta property="og:image" content="https://qiubochen.github.io/obsidianShow/wiki/reports/2026-06-15-tokenfactory词元工厂-九章云极infoq-技术与产业发展白皮书-og-image.webp"/><meta property="og:image:url" content="https://qiubochen.github.io/obsidianShow/wiki/reports/2026-06-15-tokenfactory词元工厂-九章云极infoq-技术与产业发展白皮书-og-image.webp"/><meta name="twitter:image" content="https://qiubochen.github.io/obsidianShow/wiki/reports/2026-06-15-tokenfactory词元工厂-九章云极infoq-技术与产业发展白皮书-og-image.webp"/><meta property="og:image:type" content="image/webp"/></head><body data-slug="wiki/reports/2026-06-15-tokenfactory词元工厂-九章云极infoq-技术与产业发展白皮书" data-basepath="/obsidianShow"><div id="quartz-root" class="page" data-frame="default"><div id="quartz-body"><div class="left sidebar"><h2 class="page-title"><a href="../..">投研知识库</a></h2><div class="mobile-only"><div class="spacer"></div></div><div class="flex-component" style="flex-direction: row; flex-wrap: nowrap; gap: 0.5rem;"><div style="flex-grow: 1; flex-shrink: 1; flex-basis: auto; order: 0; align-self: center; justify-self: center;"><div class="search"><button class="search-button" aria-label="搜索" aria-expanded="false"><svg role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 19.9 19.7"><title>Search</title><g class="search-path" fill="none"><path stroke-linecap="square" d="M18.5 18.3l-5.4-5.4"></path><circle cx="8" cy="8" r="7"></circle></g></svg><p>搜索</p></button><div class="search-container"><div class="search-space"><input autocomplete="off" class="search-bar" name="search" type="text" aria-label="搜索内容..." placeholder="搜索内容..."/><div class="search-layout" data-preview="true" data-field-priority="[&quot;title&quot;,&quot;content&quot;,&quot;tags&quot;]"></div></div></div></div></div><div style="flex-grow: 0; flex-shrink: 1; flex-basis: auto; order: 0; align-self: center; justify-self: center;"><button class="darkmode" aria-label="暗色模式"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" class="dayIcon" x="0px" y="0px" viewBox="0 0 35 35" style="enable-background:new 0 0 35 35" xml:space="preserve" aria-label="暗色模式"><title>暗色模式</title><path d="M6,17.5C6,16.672,5.328,16,4.5,16h-3C0.672,16,0,16.672,0,17.5    S0.672,19,1.5,19h3C5.328,19,6,18.328,6,17.5z M7.5,26c-0.414,0-0.789,0.168-1.061,0.439l-2,2C4.168,28.711,4,29.086,4,29.5    C4,30.328,4.671,31,5.5,31c0.414,0,0.789-0.168,1.06-0.44l2-2C8.832,28.289,9,27.914,9,27.5C9,26.672,8.329,26,7.5,26z M17.5,6    C18.329,6,19,5.328,19,4.5v-3C19,0.672,18.329,0,17.5,0S16,0.672,16,1.5v3C16,5.328,16.671,6,17.5,6z M27.5,9    c0.414,0,0.789-0.168,1.06-0.439l2-2C30.832,6.289,31,5.914,31,5.5C31,4.672,30.329,4,29.5,4c-0.414,0-0.789,0.168-1.061,0.44    l-2,2C26.168,6.711,26,7.086,26,7.5C26,8.328,26.671,9,27.5,9z M6.439,8.561C6.711,8.832,7.086,9,7.5,9C8.328,9,9,8.328,9,7.5    c0-0.414-0.168-0.789-0.439-1.061l-2-2C6.289,4.168,5.914,4,5.5,4C4.672,4,4,4.672,4,5.5c0,0.414,0.168,0.789,0.439,1.06    L6.439,8.561z M33.5,16h-3c-0.828,0-1.5,0.672-1.5,1.5s0.672,1.5,1.5,1.5h3c0.828,0,1.5-0.672,1.5-1.5S34.328,16,33.5,16z     M28.561,26.439C28.289,26.168,27.914,26,27.5,26c-0.828,0-1.5,0.672-1.5,1.5c0,0.414,0.168,0.789,0.439,1.06l2,2    C28.711,30.832,29.086,31,29.5,31c0.828,0,1.5-0.672,1.5-1.5c0-0.414-0.168-0.789-0.439-1.061L28.561,26.439z M17.5,29    c-0.829,0-1.5,0.672-1.5,1.5v3c0,0.828,0.671,1.5,1.5,1.5s1.5-0.672,1.5-1.5v-3C19,29.672,18.329,29,17.5,29z M17.5,7    C11.71,7,7,11.71,7,17.5S11.71,28,17.5,28S28,23.29,28,17.5S23.29,7,17.5,7z M17.5,25c-4.136,0-7.5-3.364-7.5-7.5    c0-4.136,3.364-7.5,7.5-7.5c4.136,0,7.5,3.364,7.5,7.5C25,21.636,21.636,25,17.5,25z"></path></svg><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" class="nightIcon" x="0px" y="0px" viewBox="0 0 100 100" style="enable-background:new 0 0 100 100" xml:space="preserve" aria-label="亮色模式"><title>亮色模式</title><path d="M96.76,66.458c-0.853-0.852-2.15-1.064-3.23-0.534c-6.063,2.991-12.858,4.571-19.655,4.571  C62.022,70.495,50.88,65.88,42.5,57.5C29.043,44.043,25.658,23.536,34.076,6.47c0.532-1.08,0.318-2.379-0.534-3.23  c-0.851-0.852-2.15-1.064-3.23-0.534c-4.918,2.427-9.375,5.619-13.246,9.491c-9.447,9.447-14.65,22.008-14.65,35.369  c0,13.36,5.203,25.921,14.65,35.368s22.008,14.65,35.368,14.65c13.361,0,25.921-5.203,35.369-14.65  c3.872-3.871,7.064-8.328,9.491-13.246C97.826,68.608,97.611,67.309,96.76,66.458z"></path></svg></button></div><div style="flex-grow: 0; flex-shrink: 1; flex-basis: auto; order: 0; align-self: center; justify-self: center;"><button class="readermode" aria-label="阅读模式"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" class="readerIcon" fill="currentColor" stroke="currentColor" stroke-width="0.2" stroke-linecap="round" stroke-linejoin="round" width="64px" height="64px" viewBox="0 0 24 24" aria-label="阅读模式"><title>阅读模式</title><g transform="translate(-1.8, -1.8) scale(1.15, 1.2)"><path d="M8.9891247,2.5 C10.1384702,2.5 11.2209868,2.96705384 12.0049645,3.76669482 C12.7883914,2.96705384 13.8709081,2.5 15.0202536,2.5 L18.7549359,2.5 C19.1691495,2.5 19.5049359,2.83578644 19.5049359,3.25 L19.5046891,4.004 L21.2546891,4.00457396 C21.6343849,4.00457396 21.9481801,4.28672784 21.9978425,4.6528034 L22.0046891,4.75457396 L22.0046891,20.25 C22.0046891,20.6296958 21.7225353,20.943491 21.3564597,20.9931534 L21.2546891,21 L2.75468914,21 C2.37499337,21 2.06119817,20.7178461 2.01153575,20.3517706 L2.00468914,20.25 L2.00468914,4.75457396 C2.00468914,4.37487819 2.28684302,4.061083 2.65291858,4.01142057 L2.75468914,4.00457396 L4.50368914,4.004 L4.50444233,3.25 C4.50444233,2.87030423 4.78659621,2.55650904 5.15267177,2.50684662 L5.25444233,2.5 L8.9891247,2.5 Z M4.50368914,5.504 L3.50468914,5.504 L3.50468914,19.5 L10.9478955,19.4998273 C10.4513189,18.9207296 9.73864328,18.5588115 8.96709342,18.5065584 L8.77307039,18.5 L5.25444233,18.5 C4.87474657,18.5 4.56095137,18.2178461 4.51128895,17.8517706 L4.50444233,17.75 L4.50368914,5.504 Z M19.5049359,17.75 C19.5049359,18.1642136 19.1691495,18.5 18.7549359,18.5 L15.2363079,18.5 C14.3910149,18.5 13.5994408,18.8724714 13.0614828,19.4998273 L20.5046891,19.5 L20.5046891,5.504 L19.5046891,5.504 L19.5049359,17.75 Z M18.0059359,3.999 L15.0202536,4 L14.8259077,4.00692283 C13.9889509,4.06666544 13.2254227,4.50975805 12.7549359,5.212 L12.7549359,17.777 L12.7782651,17.7601316 C13.4923805,17.2719483 14.3447024,17 15.2363079,17 L18.0059359,16.999 L18.0056891,4.798 L18.0033792,4.75457396 L18.0056891,4.71 L18.0059359,3.999 Z M8.9891247,4 L6.00368914,3.999 L6.00599909,4.75457396 L6.00599909,4.75457396 L6.00368914,4.783 L6.00368914,16.999 L8.77307039,17 C9.57551536,17 10.3461406,17.2202781 11.0128313,17.6202194 L11.2536891,17.776 L11.2536891,5.211 C10.8200889,4.56369974 10.1361548,4.13636104 9.37521067,4.02745763 L9.18347055,4.00692283 L8.9891247,4 Z"></path></g></svg></button></div></div><div class="explorer nav-files-container" data-behavior="link" data-collapsed="collapsed" data-savestate="true" data-data-fns="{&quot;order&quot;:[&quot;filter&quot;,&quot;map&quot;,&quot;sort&quot;],&quot;sortFn&quot;:&quot;(a2, b2) => {\n    if (!a2.isFolder &amp;&amp; !b2.isFolder || a2.isFolder &amp;&amp; b2.isFolder) {\n      return (a2.displayName || \&quot;\&quot;).localeCompare(b2.displayName || \&quot;\&quot;, void 0, {\n        numeric: true,\n        sensitivity: \&quot;base\&quot;\n      });\n    }\n    if (!a2.isFolder &amp;&amp; b2.isFolder) {\n      return 1;\n    }\n    return -1;\n  }&quot;,&quot;filterFn&quot;:&quot;(node) => node.slugSegment !== \&quot;tags\&quot;&quot;,&quot;mapFn&quot;:&quot;(node) => {\n    return node;\n  }&quot;}"><button type="button" class="explorer-toggle mobile-explorer hide-until-loaded" data-mobile="true" aria-controls="explorer-117" aria-label="探索"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide-menu"><line x1="4" x2="20" y1="12" y2="12"></line><line x1="4" x2="20" y1="6" y2="6"></line><line x1="4" x2="20" y1="18" y2="18"></line></svg></button><button type="button" class="title-button explorer-toggle desktop-explorer" data-mobile="false" aria-expanded="true"><h2>探索</h2><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="5 8 14 8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="fold"><polyline points="6 9 12 15 18 9"></polyline></svg></button><div id="explorer-117" class="explorer-content" aria-expanded="false" role="group"><ul class="explorer-ul overflow" id="list-0"><li class="overflow-end"></li></ul></div><template id="template-file"><li><a href="#" class="nav-file-title tree-item-self"></a></li></template><template id="template-folder"><li><div class="folder-container nav-folder-title tree-item-self"><svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="5 8 14 8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="folder-icon nav-folder-collapse-indicator collapse-icon"><polyline points="6 9 12 15 18 9"></polyline></svg><div><button class="folder-button"><span class="folder-title"></span></button></div></div><div class="folder-outer"><ul class="content tree-item-children"></ul></div></li></template></div></div><div class="center"><div class="page-header"><div class="popover-hint"><nav class="breadcrumb-container" aria-label="breadcrumbs"><div class="breadcrumb-element"><a href="../../">Home</a><p> ❯ </p></div><div class="breadcrumb-element"><a href="../../wiki/">wiki</a><p> ❯ </p></div><div class="breadcrumb-element"><a href="../../wiki/reports/">reports</a><p> ❯ </p></div><div class="breadcrumb-element"><a href>2026-06-15-TokenFactory词元工厂-九章云极InfoQ-技术与产业发展白皮书</a></div></nav><h1 class="article-title">2026-06-15-TokenFactory词元工厂-九章云极InfoQ-技术与产业发展白皮书</h1><details class="note-properties metadata-container" open data-collapsed="false"><summary class="note-properties-header"><span class="note-properties-title">Properties</span><span class="note-properties-count">1</span></summary><table class="note-properties-table"><tbody><tr class="note-properties-row metadata-property"><td class="note-properties-key metadata-property-key">tags</td><td class="note-properties-value metadata-property-value"><span class="note-properties-tags"><a href="../../tags/tokenfactory" class="internal internal-link tag-link">tokenfactory</a><span class="note-properties-separator">, </span><a href="../../tags/词元工厂" class="internal internal-link tag-link">词元工厂</a><span class="note-properties-separator">, </span><a href="../../tags/token经济" class="internal internal-link tag-link">token经济</a><span class="note-properties-separator">, </span><a href="../../tags/ai推理" class="internal internal-link tag-link">ai推理</a><span class="note-properties-separator">, </span><a href="../../tags/智算中心" class="internal internal-link tag-link">智算中心</a><span class="note-properties-separator">, </span><a href="../../tags/算电协同" class="internal internal-link tag-link">算电协同</a><span class="note-properties-separator">, </span><a href="../../tags/东数西算" class="internal internal-link tag-link">东数西算</a><span class="note-properties-separator">, </span><a href="../../tags/maas" class="internal internal-link tag-link">maas</a><span class="note-properties-separator">, </span><a href="../../tags/aaas" class="internal internal-link tag-link">aaas</a><span class="note-properties-separator">, </span><a href="../../tags/推理优化" class="internal internal-link tag-link">推理优化</a></span></td></tr></tbody></table></details><p show-comma="true" class="content-meta"><time datetime="2026-07-12T13:35:24.583Z">2026年7月12日</time><span>17分钟阅读</span></p></div></div><article class="popover-hint"><div class="markdown-preview-view markdown-rendered"><h1 id="九章云极-datacanvas--infoqtoken经济token-factory词元工厂技术与产业发展白皮书2026-06">九章云极 DataCanvas &amp; InfoQ·Token经济：Token Factory（词元工厂）技术与产业发展白皮书（2026-06）<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#九章云极-datacanvas--infoqtoken经济token-factory词元工厂技术与产业发展白皮书2026-06" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h1>
+<blockquote>
+<p>⚠️ 本报告由九章云极 DataCanvas 与 InfoQ 联合出品，属于产业机构白皮书而非持牌卖方研究；行业数据多引自公开资料与第三方预测，九章智算云案例为厂商自述，可信度与可复现性需自行判断。原文仅标“2026 年 6 月”，本卡以 6 月 15 日作为时间线占位，并非精确发布日期。</p>
+</blockquote>
+<h2 id="一句话论点">一句话论点<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#一句话论点" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<p>九章云极 DataCanvas 与 InfoQ 认为，AI 产业的评价尺度正从 GPU 数量与峰值 FLOPS 转向“单位电力可生产多少高质量 Token”；Token Factory 将电力、芯片、数据与算法组织成工业化推理产线，商业模式由卖卡时升级为按 Token/智能结果收费，其胜负取决于 Tokens/W、有效 Token 产能、单位 Token 成本与算电协同，而非单纯堆叠算力。</p>
+<h2 id="核心逻辑链">核心逻辑链<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#核心逻辑链" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<ol>
+<li><strong>事实</strong>：报告引国家数据局口径称，中国日均 Token 调用量两年内由 1,000 亿增至 140 万亿；引艾媒咨询称 2025 年中国词元调用总量 24,619.3 万亿次，预计 2026/2030 年分别为 111,799.5/7,046,680.4 万亿次（原文P3·图1）。</li>
+<li><strong>判断</strong>：推理与 Agent 调用增长，使 Token 从模型内部计量单位转为可计量、可计费的智能服务商品；AI 基础设施的核心产出也由 FLOPS 变为有效 Token。</li>
+<li><strong>判断</strong>：在电力约束下，产能上限可概括为“每瓦 Token 产出 × 可用电力规模”。因此高能效芯片、液冷、集群调度、模型量化、缓存与绿电成本共同决定单位 Token 成本。</li>
+<li><strong>判断</strong>：成本端以 GPU 折旧为主，固定成本占比高；当利用率和 Token 产能提升时，折旧被摊薄，按 Token 分成的盈利弹性可能高于传统卡时租赁。</li>
+<li><strong>判断</strong>：价值链从上游能源/芯片/网络，经中游模型与云平台，传导至下游 API、MaaS 与 Agent；中国的相对优势被概括为低成本绿电、工程化效率、完整生态与“东数西算/Token 出海”。</li>
+</ol>
+<blockquote>
+<p>⚠️ “收入 = Tokens/W × 可用千兆瓦数”在原文脚注中已说明只是固定电力约束下的产能/收入上限框架，并非完整收入公式；缺少 Token 售价、有效率、负载率、SLA 与资本成本等变量，不能直接用于估值。</p>
+</blockquote>
+<h2 id="范式变化数据中心到词元工厂">范式变化：数据中心到词元工厂<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#范式变化数据中心到词元工厂" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="table-container"><table><thead><tr><th>维度</th><th>传统数据中心</th><th>Token Factory</th></tr></thead><tbody><tr><td>本质定位</td><td>算力枢纽/资源出租</td><td>智能生产线</td></tr><tr><td>核心产出</td><td>算力资源（FLOPS）</td><td>Token（智能服务单位）</td></tr><tr><td>优化目标</td><td>峰值算力、调度效率</td><td>Token 吞吐、单位功耗产出、单位成本</td></tr><tr><td>架构逻辑</td><td>高性能计算集群</td><td>算-电-热-网协同</td></tr><tr><td>能源策略</td><td>高密度供电、部分绿电</td><td>微电网/核电或地热绑定/液冷</td></tr><tr><td>商业模式</td><td>按台月、卡时、核时、DCU 出租</td><td>按百万 Token 或智能结果计费</td></tr><tr><td>核心 KPI</td><td>GPU 数、峰值 FLOPS</td><td>Tokens/W、每百万 Token 成本</td></tr><tr><td>报告给出的毛利率口径</td><td>约 20%–25%</td><td>可达 40%–50%+</td></tr></tbody></table></div>
+<p>（原文P7·表1；毛利率为报告归纳口径，非统一行业审计数据。）</p>
+<h2 id="关键数据与测算">关键数据与测算<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#关键数据与测算" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<h3 id="128-节点-h200-集群成本结构">128 节点 H200 集群成本结构<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#128-节点-h200-集群成本结构" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<p>报告采用“硬件资本支出按五年、零残值折旧计入全口径运营成本”的口径；下表占比合计 100%。</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="table-container"><table><thead><tr><th>成本项</th><th style="text-align:right;">占比</th><th>成本性质</th><th>关键假设/控制变量</th></tr></thead><tbody><tr><td>GPU 设备折旧</td><td style="text-align:right;">60%</td><td>固定成本</td><td>H200 单卡 3.5万–4万美元；5 年折旧；集群利用率目标 70%+</td></tr><tr><td>网络设备折旧</td><td style="text-align:right;">10%</td><td>固定成本</td><td>光模块、核心/TOR 交换机与布线；扩容节奏及备件冗余</td></tr><tr><td>机柜用电</td><td style="text-align:right;">8%</td><td>变动成本</td><td>西部绿电 0.2–0.4 元/度；全液冷 PUE 可控至 1.1 内</td></tr><tr><td>运营带宽 + 人力</td><td style="text-align:right;">10%</td><td>半固定成本</td><td>弹性带宽、一体化运维与自动化提升人效</td></tr><tr><td>软件平台</td><td style="text-align:right;">10%</td><td>半固定成本</td><td>调度、推理加速、MaaS、安全合规，自研换取长期授权节省</td></tr><tr><td>其他综合成本</td><td style="text-align:right;">2%</td><td>固定/杂项</td><td>场地、土建分摊、保险、备件、资质与风险准备</td></tr></tbody></table></div>
+<p>（原文P9–10·表2；视觉核对占比 60%+10%+8%+10%+10%+2%=100%。）</p>
+<h3 id="按百万-token-的五级定价示意">按百万 Token 的五级定价示意<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#按百万-token-的五级定价示意" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="table-container"><table><thead><tr><th>层级</th><th style="text-align:right;">价格</th><th>报告描述的场景</th></tr></thead><tbody><tr><td>免费层</td><td style="text-align:right;">0 美元</td><td>高吞吐、低速度，获客与培养习惯</td></tr><tr><td>基础层</td><td style="text-align:right;">3 美元</td><td>普通问答、文档摘要</td></tr><tr><td>进阶层</td><td style="text-align:right;">6 美元</td><td>企业复杂分析、代码生成</td></tr><tr><td>高速层</td><td style="text-align:right;">45 美元</td><td>长上下文、金融/医疗等深度推理</td></tr><tr><td>顶级层</td><td style="text-align:right;">150 美元</td><td>超长研究与关键路径实时响应</td></tr></tbody></table></div>
+<p>（原文P12·表2；报告称其为黄仁勋五级分层模型，但未给出可复核的原始演讲出处与输入/输出 Token 口径，宜视为情景定价而非市场统一报价。）</p>
+<h3 id="盈利框架">盈利框架<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#盈利框架" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<ul>
+<li>报告引中金公司 2026 年 5 月研报及润建股份测算称，传统算力租赁毛利率约 20%–30%，Token 工厂经细切、分时复用和模型优化可达 40%–50%，自建算力场景或 60%+。</li>
+<li>报告引润建股份公开测算称，Token 分成模式回收期约 2 年，传统算租为 3–5 年；并称收入或为传统租赁的 5–10 倍、净利率可能由 10%–15% 升至 30%+（原文P11–12）。</li>
+<li><strong>可信度提醒</strong>：上述口径缺少资本开支、负载率、价格、客户结构和现金流明细，属于企业/报告情景测算，不宜当作行业基准。</li>
+</ul>
+<h3 id="九章云极自述案例">九章云极自述案例<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#九章云极自述案例" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="table-container"><table><thead><tr><th>场景</th><th>技术</th><th>案例成效（厂商自述）</th></tr></thead><tbody><tr><td>制造业 AI 质检</td><td>动态批处理；GPU 利用率 30%→85%+</td><td>TPOT -40%；单位有效 Token 成本 -55%；年算力总支出 -60%+</td></tr><tr><td>生物制药分子筛选</td><td>PagedAttention + HBM/DRAM/SSD/对象存储四层缓存</td><td>利用率 14.4%→56%；Token 效能近 4 倍；任务小时级→分钟级；研发周期 -50%+</td></tr><tr><td>企业多模型服务</td><td>H800 + 昇腾 910B 异构融合、MoE 路由与资源池化</td><td>单位 Token 成本 -30%；VpT +60%；硬件采购成本 -40%</td></tr></tbody></table></div>
+<p>（原文P39·案例1–3；已视觉核对数字。报告未披露客户名、测试基线、样本规模与复现条件，不能横向外推。）</p>
+<h2 id="测算假设链">测算假设链<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#测算假设链" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<ul>
+<li><strong>需求假设</strong>：Token 调用量延续高增长，且 Agent/长上下文使有效推理需求快于传统 API 调用增长。</li>
+<li><strong>电力假设</strong>：可用电力是产能硬上限；西部绿电 0.2–0.4 元/度、液冷 PUE 约 1.1 的项目条件能够获得并长期维持。</li>
+<li><strong>利用率假设</strong>：128 节点 H200 集群可长期保持 70%+ 利用率，从而摊薄占总成本 60% 的 GPU 折旧。</li>
+<li><strong>折旧假设</strong>：AI 硬件约两年迭代一代，但会计折旧使用 5 年、零残值；若经济寿命短于折旧寿命，单位成本与减值风险会被低估。</li>
+<li><strong>价格假设</strong>：单位 Token 成本随芯片/软件效率下降，而服务售价因结构性需求保持相对刚性；若模型价格战快于降本，利润扩张不成立。</li>
+<li><strong>有效性假设</strong>：产出的 Token 能满足成功率、质量与时延约束；只提高原始吞吐而不提高 eTPM，不构成真实产能增长。</li>
+<li><strong>网络假设</strong>：高速互联、800G/1.6T 光模块与调度软件不会成为扩展瓶颈，多节点 eTPM 可接近线性增长。</li>
+</ul>
+<blockquote>
+<p>结论会过时，以上假设链可用新的电价、PUE、芯片价格、负载率、Token 售价与 eTPM 重新代入。</p>
+</blockquote>
+<h2 id="token-生产效率评价体系">Token 生产效率评价体系<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#token-生产效率评价体系" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="table-container"><table><thead><tr><th>类别</th><th>指标</th><th>公式/含义</th><th>主要优化路径</th></tr></thead><tbody><tr><td>产能</td><td>Tokens/s</td><td>周期 Token 总数 / 周期秒数</td><td>动态/连续批处理、INT8、Prefill-Decode 分离</td></tr><tr><td>产能</td><td>有效 Token 产能 eTPM</td><td>Output TPM × 成功率 × 质量达标率 × 时延达标率</td><td>健壮性、TTFT/TPOT、指令微调/RLHF</td></tr><tr><td>时延</td><td>TTFT</td><td>首个输出返回时间 - 请求发出时间</td><td>FlashAttention、路由/负载均衡、Prefix Cache</td></tr><tr><td>时延</td><td>TPOT/ITL</td><td>（总输出时间 - TTFT）/（输出 Token 数 - 1）</td><td>HBM 带宽、PagedAttention、投机解码</td></tr><tr><td>体验</td><td>E2E Latency</td><td>完整响应结束时间 - 请求发出时间</td><td>全链路优化、800G/1.6T、边缘部署</td></tr><tr><td>资源</td><td>加速器利用率</td><td>实际计算时间 / 总时间</td><td>异构调度、KV Cache 卸载、降低通信等待</td></tr><tr><td>缓存</td><td>Cache 命中率</td><td>缓存命中请求数 / 总查询数</td><td>LRU/LFU、共享前缀、缓存预热</td></tr><tr><td>能效</td><td>单 Token 能耗</td><td>总能耗 / 有效 Token 总数</td><td>高能效芯片、液冷、算电协同</td></tr><tr><td>经济性</td><td>单位有效 Token 成本</td><td>（GPU 折旧 + 电费 + 运维）/有效 Token 总数</td><td>低电价、提高产出、规模效应</td></tr><tr><td>扩展</td><td>并行扩展效率</td><td>（多节点 eTPM / 单节点 eTPM）/节点数</td><td>NVLink/InfiniBand、并行策略、减少同步开销</td></tr></tbody></table></div>
+<p>（原文P58–59·表6；视觉核对公式与文本层一致。）</p>
+<h2 id="产业链与参与者">产业链与参与者<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#产业链与参与者" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<p><code>能源/芯片/服务器/网络/存储 → 大模型与云平台/训练工厂/推理工厂 → API/MaaS/AaaS/行业 Agent</code></p>
+<ul>
+<li><strong>上游生产要素</strong>：绿电与算电协同、高能效 GPU/NPU、超节点、交换机/光模块、存储与液冷。报告实质讨论 <a href="../../英伟达" class="internal internal-link alias" data-slug="英伟达">英伟达</a>、<a href="../../华为" class="internal internal-link alias" data-slug="华为">华为</a>、<a href="../../寒武纪" class="internal internal-link alias" data-slug="寒武纪">寒武纪</a>、<a href="../../海光信息" class="internal internal-link alias" data-slug="海光信息">海光信息</a> 等，但均非本篇主标的。</li>
+<li><strong>中游生产执行</strong>：模型优化、异构算力调度、推理引擎、MaaS 与计量结算。报告重点展示九章云极 Alaya NeW，但九章云极是报告发布方，按库规不建公司页。</li>
+<li><strong>下游价值实现</strong>：API 调用、行业 Agent、SaaS→MaaS→AaaS；价值评价从 Token 数量进一步转向 VpT（Value per Token）。</li>
+<li><strong>基础设施接口</strong>：<a href="../../wiki/industries/ai算力产业链" class="internal internal-link alias" data-slug="wiki/industries/ai算力产业链">AI算力产业链</a>、<a href="../../ai算力芯片" class="internal internal-link alias" data-slug="ai算力芯片">AI算力芯片</a>、<a href="../../wiki/industries/cpo与光通信" class="internal internal-link alias" data-slug="wiki/industries/cpo与光通信">CPO与光通信</a>、<a href="../../液冷" class="internal internal-link alias" data-slug="液冷">液冷</a>、<a href="../../wiki/industries/aidc电力与供电架构" class="internal internal-link alias" data-slug="wiki/industries/aidc电力与供电架构">AIDC电力与供电架构</a>、<a href="../../wiki/industries/算力政策与东数西算" class="internal internal-link alias" data-slug="wiki/industries/算力政策与东数西算">算力政策与东数西算</a>。</li>
+</ul>
+<h2 id="中国路径与政策映射">中国路径与政策映射<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#中国路径与政策映射" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<ul>
+<li>报告将中国优势概括为低成本绿电、国产模型与工程化效率、完整上中下游生态、超大应用市场，以及宁夏/甘肃等西部枢纽承接非实时推理。</li>
+<li>“Token 出海”的基本路径是境内生产、跨境交付 AI 服务；其经济性依赖电价与模型价格差，其可行性还受数据跨境、芯片供应、模型合规与海外 SLA 约束。</li>
+<li>报告前言称中国电信宁夏分公司发布 174.38 亿元（含税）“Token 工厂”集采，作为产业从概念向基建项目迁移的标志；本卡未外部核验招标口径，保留为报告陈述。</li>
+</ul>
+<h2 id="催化剂与时间点">催化剂与时间点<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#催化剂与时间点" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<ul class="contains-task-list">
+<li class="task-list-item" data-task=" "><input type="checkbox" class="checkbox-toggle"/> 国家/地方形成可对比的 Token 计量、质量与服务标准，特别是 eTPM、SLA 和能效口径。</li>
+<li class="task-list-item" data-task=" "><input type="checkbox" class="checkbox-toggle"/> “东数西算”枢纽出现更多按有效 Token 计费、而非按卡时出租的可审计合同。</li>
+<li class="task-list-item" data-task=" "><input type="checkbox" class="checkbox-toggle"/> 国产 GPU/NPU 与异构调度在千卡/万卡推理场景披露可复现的利用率、TTFT、TPOT 与成本数据。</li>
+<li class="task-list-item" data-task=" "><input type="checkbox" class="checkbox-toggle"/> 电价、PUE 与 Token 售价下降速度之间形成可持续的单位经济模型。</li>
+<li class="task-list-item" data-task=" "><input type="checkbox" class="checkbox-toggle"/> MaaS/AaaS 需求扩大并带动 Token 工厂负载率持续高于 70%。</li>
+</ul>
+<h2 id="风险提示">风险提示<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#风险提示" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<ul>
+<li>电力供给、并网与绿电稳定性不足；PUE 与电价假设无法落地。</li>
+<li>高端 AI 芯片供应、地缘政治与国产软硬件生态适配风险。</li>
+<li>硬件迭代快于折旧，造成资产减值、利用率不足和回收期拉长。</li>
+<li>推理效率面临存储墙、互联、HBM 与算法边际收益下降等物理瓶颈。</li>
+<li>Token 商品化缺少跨模型质量可比性；按数量计费可能激励低质量输出。</li>
+<li>模型/API 降价快于成本下降，报告假定的“价格稳、成本降”失效。</li>
+<li>数据隐私、内容安全、跨境合规与监管风险。</li>
+<li>厂商案例缺少客户名和复现条件，降本幅度存在选择性披露风险。</li>
+</ul>
+<h2 id="与前篇观点对比">与前篇观点对比<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#与前篇观点对比" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<ul>
+<li>对比 <a href="../../wiki/reports/2026-06-24-ai大模型行业深度-华西证券-效率革命" class="internal internal-link alias" data-slug="wiki/reports/2026-06-24-ai大模型行业深度-华西证券-效率革命">2026-06-24-AI大模型行业深度-华西证券-效率革命</a>：华西证券从模型/应用效率革命解释需求，本篇把效率进一步落到 Tokens/W、eTPM、TTFT/TPOT 和单位有效 Token 成本，补足推理基础设施的经营指标。</li>
+<li>对比 <a href="../../wiki/reports/2026-06-30-算力政策专题-西部证券-数字中国建设算力新部署" class="internal internal-link alias" data-slug="wiki/reports/2026-06-30-算力政策专题-西部证券-数字中国建设算力新部署">2026-06-30-算力政策专题-西部证券-数字中国建设算力新部署</a>：西部证券提供全国一体化算力网、东数西算、PUE/国产化等政策硬约束；本篇提供“算力如何变成可计费 Token”的微观运营框架。</li>
+<li>对比 <a href="../../wiki/reports/2026-07-07-互联网capex-bofa-提高资本开支预测" class="internal internal-link alias" data-slug="wiki/reports/2026-07-07-互联网capex-bofa-提高资本开支预测">2026-07-07-互联网Capex-BofA-提高资本开支预测</a>：BofA 用 GW 容量和 Capex 拆分刻画海外供给规模，本篇强调同一电力规模下的有效 Token 转化率。两者合并可形成“GW × Tokens/W × 有效率 × 单价”的完整收入桥。</li>
+</ul>
+<blockquote>
+<p>⚠️ <strong>核心分歧</strong>：本篇偏乐观地假设 Token 价格具刚性、分成模式显著提高毛利和回收速度；既有海外 Capex 研究更强调电力、融资与建设周期约束。高需求不自动等于高回报，仍需用真实负载率、价格与现金流验证。</p>
+</blockquote>
+<h2 id="原文溯源">原文溯源<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#原文溯源" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<ul>
+<li>源文件：<code>raw/2026-07-12T2118-2026年TokenFactory词元工厂技术与产业发展白皮书.pdf</code></li>
+<li>核心页：P3 图1（中国词元调用量预测）；P7 表1（传统数据中心 vs Token Factory）；P9–10 表2（成本结构）；P11–12（商业模式/定价/回收）；P39（3 个案例）；P58–59 表6（效率指标体系）。</li>
+</ul></div></article><hr/><div class="page-footer"></div></div><div class="right sidebar"><div class="graph"><h3>关系图谱</h3><div class="graph-outer"><div class="graph-container" data-cfg="{&quot;drag&quot;:true,&quot;zoom&quot;:true,&quot;depth&quot;:1,&quot;scale&quot;:1.1,&quot;repelForce&quot;:0.5,&quot;centerForce&quot;:0.3,&quot;linkDistance&quot;:30,&quot;fontSize&quot;:0.6,&quot;opacityScale&quot;:1,&quot;showTags&quot;:true,&quot;removeTags&quot;:[],&quot;focusOnHover&quot;:false,&quot;enableRadial&quot;:false}"></div><button class="global-graph-icon" aria-label="Global Graph"><svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 55 55" fill="currentColor" xml:space="preserve"><path d="M49,0c-3.309,0-6,2.691-6,6c0,1.035,0.263,2.009,0.726,2.86l-9.829,9.829C32.542,17.634,30.846,17,29,17
+                s-3.542,0.634-4.898,1.688l-7.669-7.669C16.785,10.424,17,9.74,17,9c0-2.206-1.794-4-4-4S9,6.794,9,9s1.794,4,4,4
+                c0.74,0,1.424-0.215,2.019-0.567l7.669,7.669C21.634,21.458,21,23.154,21,25s0.634,3.542,1.688,4.897L10.024,42.562
+                C8.958,41.595,7.549,41,6,41c-3.309,0-6,2.691-6,6s2.691,6,6,6s6-2.691,6-6c0-1.035-0.263-2.009-0.726-2.86l12.829-12.829
+                c1.106,0.86,2.44,1.436,3.898,1.619v10.16c-2.833,0.478-5,2.942-5,5.91c0,3.309,2.691,6,6,6s6-2.691,6-6c0-2.967-2.167-5.431-5-5.91
+                v-10.16c1.458-0.183,2.792-0.759,3.898-1.619l7.669,7.669C41.215,39.576,41,40.26,41,41c0,2.206,1.794,4,4,4s4-1.794,4-4
+                s-1.794-4-4-4c-0.74,0-1.424,0.215-2.019,0.567l-7.669-7.669C36.366,28.542,37,26.846,37,25s-0.634-3.542-1.688-4.897l9.665-9.665
+                C46.042,11.405,47.451,12,49,12c3.309,0,6-2.691,6-6S52.309,0,49,0z M11,9c0-1.103,0.897-2,2-2s2,0.897,2,2s-0.897,2-2,2
+                S11,10.103,11,9z M6,51c-2.206,0-4-1.794-4-4s1.794-4,4-4s4,1.794,4,4S8.206,51,6,51z M33,49c0,2.206-1.794,4-4,4s-4-1.794-4-4
+                s1.794-4,4-4S33,46.794,33,49z M29,31c-3.309,0-6-2.691-6-6s2.691-6,6-6s6,2.691,6,6S32.309,31,29,31z M47,41c0,1.103-0.897,2-2,2
+                s-2-0.897-2-2s0.897-2,2-2S47,39.897,47,41z M49,10c-2.206,0-4-1.794-4-4s1.794-4,4-4s4,1.794,4,4S51.206,10,49,10z"></path></svg></button></div><div class="global-graph-outer"><div class="global-graph-container" data-cfg="{&quot;drag&quot;:true,&quot;zoom&quot;:true,&quot;depth&quot;:-1,&quot;scale&quot;:0.9,&quot;repelForce&quot;:0.5,&quot;centerForce&quot;:0.2,&quot;linkDistance&quot;:30,&quot;fontSize&quot;:0.6,&quot;opacityScale&quot;:1,&quot;showTags&quot;:true,&quot;removeTags&quot;:[],&quot;focusOnHover&quot;:true,&quot;enableRadial&quot;:true}"></div></div></div><div class="toc"><button type="button" class="toc-header" aria-controls="toc-116" aria-expanded="true"><h3>目录</h3><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="fold"><polyline points="6 9 12 15 18 9"></polyline></svg></button><ul id="list-0" class="toc-content overflow"><li class="depth-0"><a href="#九章云极-datacanvas--infoqtoken经济token-factory词元工厂技术与产业发展白皮书2026-06" data-for="九章云极-datacanvas--infoqtoken经济token-factory词元工厂技术与产业发展白皮书2026-06">九章云极 DataCanvas &amp; InfoQ·Token经济：Token Factory（词元工厂）技术与产业发展白皮书（2026-06）</a></li><li class="depth-1"><a href="#一句话论点" data-for="一句话论点">一句话论点</a></li><li class="depth-1"><a href="#核心逻辑链" data-for="核心逻辑链">核心逻辑链</a></li><li class="depth-1"><a href="#范式变化数据中心到词元工厂" data-for="范式变化数据中心到词元工厂">范式变化：数据中心到词元工厂</a></li><li class="depth-1"><a href="#关键数据与测算" data-for="关键数据与测算">关键数据与测算</a></li><li class="depth-2"><a href="#128-节点-h200-集群成本结构" data-for="128-节点-h200-集群成本结构">128 节点 H200 集群成本结构</a></li><li class="depth-2"><a href="#按百万-token-的五级定价示意" data-for="按百万-token-的五级定价示意">按百万 Token 的五级定价示意</a></li><li class="depth-2"><a href="#盈利框架" data-for="盈利框架">盈利框架</a></li><li class="depth-2"><a href="#九章云极自述案例" data-for="九章云极自述案例">九章云极自述案例</a></li><li class="depth-1"><a href="#测算假设链" data-for="测算假设链">测算假设链</a></li><li class="depth-1"><a href="#token-生产效率评价体系" data-for="token-生产效率评价体系">Token 生产效率评价体系</a></li><li class="depth-1"><a href="#产业链与参与者" data-for="产业链与参与者">产业链与参与者</a></li><li class="depth-1"><a href="#中国路径与政策映射" data-for="中国路径与政策映射">中国路径与政策映射</a></li><li class="depth-1"><a href="#催化剂与时间点" data-for="催化剂与时间点">催化剂与时间点</a></li><li class="depth-1"><a href="#风险提示" data-for="风险提示">风险提示</a></li><li class="depth-1"><a href="#与前篇观点对比" data-for="与前篇观点对比">与前篇观点对比</a></li><li class="depth-1"><a href="#原文溯源" data-for="原文溯源">原文溯源</a></li><li class="overflow-end"></li></ul></div><div class="backlinks"><h3>反向链接</h3><ul id="list-0" class="overflow"><li><a href="../../" class="internal">index</a></li><li><a href="../../wiki/" class="internal">wiki</a></li><li><a href="../../wiki/industries/ai算力产业链" class="internal">AI算力产业链</a></li><li><a href="../../wiki/industries/token经济与词元工厂" class="internal">Token经济与词元工厂</a></li><li><a href="../../wiki/log" class="internal">log</a></li><li class="overflow-end"></li></ul></div></div><footer class><p>Created with <a href="https://quartz.jzhao.xyz/">Quartz v5.0.0</a> © 2026</p><ul><li><a href="https://github.com/jackyzha0/quartz">GitHub</a></li><li><a href="https://discord.gg/cRFFHYye7t">Discord Community</a></li></ul></footer></div></div></body><script src="../../static/resource-after-e13fffa1.js" type="application/javascript" data-persist="true"></script><script src="../../static/resource-after-8b336f9a.js" type="application/javascript" data-persist="true"></script><script src="../../static/resource-after-baba652b.js" type="application/javascript" data-persist="true"></script><script src="../../static/resource-after-5eb75950.js" type="module" data-persist="true"></script><script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/copy-tex.min.js" type="application/javascript" data-persist="true"></script><script src="../../postscript-9275baab.js" type="module" data-persist="true"></script></html>

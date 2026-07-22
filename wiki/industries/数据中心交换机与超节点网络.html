@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="zh" dir="ltr"><head><title>数据中心交换机与超节点网络</title><meta charset="utf-8"/><link rel="preload" href="../../index-47d9ba67.css" as="style"/><link rel="preload" href="../../prescript-2bfc6315.js" as="script"/><link rel="preconnect" href="https://fonts.googleapis.com"/><link rel="preconnect" href="https://fonts.gstatic.com"/><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Schibsted Grotesk:wght@400;700&amp;family=Source Sans Pro:ital,wght@0,400;0,600;1,400;1,600&amp;family=IBM Plex Mono:wght@400;600&amp;display=swap"/><link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin="anonymous"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/><meta name="og:site_name" content="投研知识库"/><meta property="og:title" content="数据中心交换机与超节点网络"/><meta property="og:type" content="website"/><meta name="twitter:card" content="summary_large_image"/><meta name="twitter:title" content="数据中心交换机与超节点网络"/><meta name="twitter:description" content="数据中心交换机与超节点网络 AI 数据中心网络分为节点内/柜内高带宽、低时延的 Scale-up 与跨服务器/跨机柜扩展集群规模的 Scale-out。二者都可能采用以太网，但在时延、散热、芯片型号、端口密度和 GPU 私有协议适配上并非同一种产品。 当前专门量化国内交换机部署的唯一来源为 2026-07-22 未署名纪要，source_quality: unknown。所有客户配置、市场份额、价格与出货预测均待公告、招标或持牌机构研报交叉验证。 产业链地图与环节关系 云厂商 AI Capex / GPU 集群部署 ├─ Scale-up：GPU/加速卡 ↔ 柜内交换机 ↔ 超节点 │ 低至数..."/><meta property="og:description" content="数据中心交换机与超节点网络 AI 数据中心网络分为节点内/柜内高带宽、低时延的 Scale-up 与跨服务器/跨机柜扩展集群规模的 Scale-out。二者都可能采用以太网，但在时延、散热、芯片型号、端口密度和 GPU 私有协议适配上并非同一种产品。 当前专门量化国内交换机部署的唯一来源为 2026-07-22 未署名纪要，source_quality: unknown。所有客户配置、市场份额、价格与出货预测均待公告、招标或持牌机构研报交叉验证。 产业链地图与环节关系 云厂商 AI Capex / GPU 集群部署 ├─ Scale-up：GPU/加速卡 ↔ 柜内交换机 ↔ 超节点 │ 低至数..."/><meta property="og:image:alt" content="数据中心交换机与超节点网络 AI 数据中心网络分为节点内/柜内高带宽、低时延的 Scale-up 与跨服务器/跨机柜扩展集群规模的 Scale-out。二者都可能采用以太网，但在时延、散热、芯片型号、端口密度和 GPU 私有协议适配上并非同一种产品。 当前专门量化国内交换机部署的唯一来源为 2026-07-22 未署名纪要，source_quality: unknown。所有客户配置、市场份额、价格与出货预测均待公告、招标或持牌机构研报交叉验证。 产业链地图与环节关系 云厂商 AI Capex / GPU 集群部署 ├─ Scale-up：GPU/加速卡 ↔ 柜内交换机 ↔ 超节点 │ 低至数..."/><meta property="twitter:domain" content="qiubochen.github.io/obsidianShow"/><meta property="og:url" content="https://qiubochen.github.io/obsidianShow/wiki/industries/数据中心交换机与超节点网络"/><meta property="twitter:url" content="https://qiubochen.github.io/obsidianShow/wiki/industries/数据中心交换机与超节点网络"/><link rel="icon" href="../../static/icon.png"/><meta name="description" content="数据中心交换机与超节点网络 AI 数据中心网络分为节点内/柜内高带宽、低时延的 Scale-up 与跨服务器/跨机柜扩展集群规模的 Scale-out。二者都可能采用以太网，但在时延、散热、芯片型号、端口密度和 GPU 私有协议适配上并非同一种产品。 当前专门量化国内交换机部署的唯一来源为 2026-07-22 未署名纪要，source_quality: unknown。所有客户配置、市场份额、价格与出货预测均待公告、招标或持牌机构研报交叉验证。 产业链地图与环节关系 云厂商 AI Capex / GPU 集群部署 ├─ Scale-up：GPU/加速卡 ↔ 柜内交换机 ↔ 超节点 │ 低至数..."/><meta name="generator" content="Quartz"/><link href="../../index-47d9ba67.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../component-735924e0.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../component-589c1cea.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../component-bbc3f7c0.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../component-2911f5d1.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../component-e427079e.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../component-53b25b2b.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../component-c93c6a44.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../component-8a06014f.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../component-77d6a441.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../component-6ee21cee.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../component-1ea6ad18.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../component-34bdfded.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../component-788c9ca3.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../component-642859cd.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../component-4abc06bd.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../component-274a3dfe.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../component-94cb6c84.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../component-58d5ff56.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../component-9f9b2774.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../component-7262b5a7.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../static/resource-style-a12dcaa2.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../static/resource-style-26a99b87.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../static/resource-style-a5c806d2.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../static/resource-style-6bd36952.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../static/resource-style-9857b007.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../static/resource-style-d3a1a224.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css" rel="stylesheet" type="text/css" data-persist="true"/><script src="../../prescript-2bfc6315.js" type="application/javascript" data-persist="true"></script><script type="application/javascript" data-persist="true">const fetchData = fetch("../../static/contentIndex.json").then(data => data.json())</script><link rel="preconnect" href="https://fonts.googleapis.com"/><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous"/><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Schibsted%20Grotesk%3Awght%40400%3B700&amp;family=Source%20Sans%20Pro%3Aital%2Cwght%400%2C400%3B0%2C600%3B1%2C400%3B1%2C600&amp;family=IBM%20Plex%20Mono%3Awght%40400%3B600&amp;display=swap"/><meta property="og:image:width" content="1200"/><meta property="og:image:height" content="630"/><meta property="og:image" content="https://qiubochen.github.io/obsidianShow/wiki/industries/数据中心交换机与超节点网络-og-image.webp"/><meta property="og:image:url" content="https://qiubochen.github.io/obsidianShow/wiki/industries/数据中心交换机与超节点网络-og-image.webp"/><meta name="twitter:image" content="https://qiubochen.github.io/obsidianShow/wiki/industries/数据中心交换机与超节点网络-og-image.webp"/><meta property="og:image:type" content="image/webp"/></head><body data-slug="wiki/industries/数据中心交换机与超节点网络" data-basepath="/obsidianShow"><div id="quartz-root" class="page" data-frame="default"><div id="quartz-body"><div class="left sidebar"><h2 class="page-title"><a href="../..">投研知识库</a></h2><div class="mobile-only"><div class="spacer"></div></div><div class="flex-component" style="flex-direction: row; flex-wrap: nowrap; gap: 0.5rem;"><div style="flex-grow: 1; flex-shrink: 1; flex-basis: auto; order: 0; align-self: center; justify-self: center;"><div class="search"><button class="search-button" aria-label="搜索" aria-expanded="false"><svg role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 19.9 19.7"><title>Search</title><g class="search-path" fill="none"><path stroke-linecap="square" d="M18.5 18.3l-5.4-5.4"></path><circle cx="8" cy="8" r="7"></circle></g></svg><p>搜索</p></button><div class="search-container"><div class="search-space"><input autocomplete="off" class="search-bar" name="search" type="text" aria-label="搜索内容..." placeholder="搜索内容..."/><div class="search-layout" data-preview="true" data-field-priority="[&quot;title&quot;,&quot;content&quot;,&quot;tags&quot;]"></div></div></div></div></div><div style="flex-grow: 0; flex-shrink: 1; flex-basis: auto; order: 0; align-self: center; justify-self: center;"><button class="darkmode" aria-label="暗色模式"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" class="dayIcon" x="0px" y="0px" viewBox="0 0 35 35" style="enable-background:new 0 0 35 35" xml:space="preserve" aria-label="暗色模式"><title>暗色模式</title><path d="M6,17.5C6,16.672,5.328,16,4.5,16h-3C0.672,16,0,16.672,0,17.5    S0.672,19,1.5,19h3C5.328,19,6,18.328,6,17.5z M7.5,26c-0.414,0-0.789,0.168-1.061,0.439l-2,2C4.168,28.711,4,29.086,4,29.5    C4,30.328,4.671,31,5.5,31c0.414,0,0.789-0.168,1.06-0.44l2-2C8.832,28.289,9,27.914,9,27.5C9,26.672,8.329,26,7.5,26z M17.5,6    C18.329,6,19,5.328,19,4.5v-3C19,0.672,18.329,0,17.5,0S16,0.672,16,1.5v3C16,5.328,16.671,6,17.5,6z M27.5,9    c0.414,0,0.789-0.168,1.06-0.439l2-2C30.832,6.289,31,5.914,31,5.5C31,4.672,30.329,4,29.5,4c-0.414,0-0.789,0.168-1.061,0.44    l-2,2C26.168,6.711,26,7.086,26,7.5C26,8.328,26.671,9,27.5,9z M6.439,8.561C6.711,8.832,7.086,9,7.5,9C8.328,9,9,8.328,9,7.5    c0-0.414-0.168-0.789-0.439-1.061l-2-2C6.289,4.168,5.914,4,5.5,4C4.672,4,4,4.672,4,5.5c0,0.414,0.168,0.789,0.439,1.06    L6.439,8.561z M33.5,16h-3c-0.828,0-1.5,0.672-1.5,1.5s0.672,1.5,1.5,1.5h3c0.828,0,1.5-0.672,1.5-1.5S34.328,16,33.5,16z     M28.561,26.439C28.289,26.168,27.914,26,27.5,26c-0.828,0-1.5,0.672-1.5,1.5c0,0.414,0.168,0.789,0.439,1.06l2,2    C28.711,30.832,29.086,31,29.5,31c0.828,0,1.5-0.672,1.5-1.5c0-0.414-0.168-0.789-0.439-1.061L28.561,26.439z M17.5,29    c-0.829,0-1.5,0.672-1.5,1.5v3c0,0.828,0.671,1.5,1.5,1.5s1.5-0.672,1.5-1.5v-3C19,29.672,18.329,29,17.5,29z M17.5,7    C11.71,7,7,11.71,7,17.5S11.71,28,17.5,28S28,23.29,28,17.5S23.29,7,17.5,7z M17.5,25c-4.136,0-7.5-3.364-7.5-7.5    c0-4.136,3.364-7.5,7.5-7.5c4.136,0,7.5,3.364,7.5,7.5C25,21.636,21.636,25,17.5,25z"></path></svg><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" class="nightIcon" x="0px" y="0px" viewBox="0 0 100 100" style="enable-background:new 0 0 100 100" xml:space="preserve" aria-label="亮色模式"><title>亮色模式</title><path d="M96.76,66.458c-0.853-0.852-2.15-1.064-3.23-0.534c-6.063,2.991-12.858,4.571-19.655,4.571  C62.022,70.495,50.88,65.88,42.5,57.5C29.043,44.043,25.658,23.536,34.076,6.47c0.532-1.08,0.318-2.379-0.534-3.23  c-0.851-0.852-2.15-1.064-3.23-0.534c-4.918,2.427-9.375,5.619-13.246,9.491c-9.447,9.447-14.65,22.008-14.65,35.369  c0,13.36,5.203,25.921,14.65,35.368s22.008,14.65,35.368,14.65c13.361,0,25.921-5.203,35.369-14.65  c3.872-3.871,7.064-8.328,9.491-13.246C97.826,68.608,97.611,67.309,96.76,66.458z"></path></svg></button></div><div style="flex-grow: 0; flex-shrink: 1; flex-basis: auto; order: 0; align-self: center; justify-self: center;"><button class="readermode" aria-label="阅读模式"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" class="readerIcon" fill="currentColor" stroke="currentColor" stroke-width="0.2" stroke-linecap="round" stroke-linejoin="round" width="64px" height="64px" viewBox="0 0 24 24" aria-label="阅读模式"><title>阅读模式</title><g transform="translate(-1.8, -1.8) scale(1.15, 1.2)"><path d="M8.9891247,2.5 C10.1384702,2.5 11.2209868,2.96705384 12.0049645,3.76669482 C12.7883914,2.96705384 13.8709081,2.5 15.0202536,2.5 L18.7549359,2.5 C19.1691495,2.5 19.5049359,2.83578644 19.5049359,3.25 L19.5046891,4.004 L21.2546891,4.00457396 C21.6343849,4.00457396 21.9481801,4.28672784 21.9978425,4.6528034 L22.0046891,4.75457396 L22.0046891,20.25 C22.0046891,20.6296958 21.7225353,20.943491 21.3564597,20.9931534 L21.2546891,21 L2.75468914,21 C2.37499337,21 2.06119817,20.7178461 2.01153575,20.3517706 L2.00468914,20.25 L2.00468914,4.75457396 C2.00468914,4.37487819 2.28684302,4.061083 2.65291858,4.01142057 L2.75468914,4.00457396 L4.50368914,4.004 L4.50444233,3.25 C4.50444233,2.87030423 4.78659621,2.55650904 5.15267177,2.50684662 L5.25444233,2.5 L8.9891247,2.5 Z M4.50368914,5.504 L3.50468914,5.504 L3.50468914,19.5 L10.9478955,19.4998273 C10.4513189,18.9207296 9.73864328,18.5588115 8.96709342,18.5065584 L8.77307039,18.5 L5.25444233,18.5 C4.87474657,18.5 4.56095137,18.2178461 4.51128895,17.8517706 L4.50444233,17.75 L4.50368914,5.504 Z M19.5049359,17.75 C19.5049359,18.1642136 19.1691495,18.5 18.7549359,18.5 L15.2363079,18.5 C14.3910149,18.5 13.5994408,18.8724714 13.0614828,19.4998273 L20.5046891,19.5 L20.5046891,5.504 L19.5046891,5.504 L19.5049359,17.75 Z M18.0059359,3.999 L15.0202536,4 L14.8259077,4.00692283 C13.9889509,4.06666544 13.2254227,4.50975805 12.7549359,5.212 L12.7549359,17.777 L12.7782651,17.7601316 C13.4923805,17.2719483 14.3447024,17 15.2363079,17 L18.0059359,16.999 L18.0056891,4.798 L18.0033792,4.75457396 L18.0056891,4.71 L18.0059359,3.999 Z M8.9891247,4 L6.00368914,3.999 L6.00599909,4.75457396 L6.00599909,4.75457396 L6.00368914,4.783 L6.00368914,16.999 L8.77307039,17 C9.57551536,17 10.3461406,17.2202781 11.0128313,17.6202194 L11.2536891,17.776 L11.2536891,5.211 C10.8200889,4.56369974 10.1361548,4.13636104 9.37521067,4.02745763 L9.18347055,4.00692283 L8.9891247,4 Z"></path></g></svg></button></div></div><div class="explorer nav-files-container" data-behavior="link" data-collapsed="collapsed" data-savestate="true" data-data-fns="{&quot;order&quot;:[&quot;filter&quot;,&quot;map&quot;,&quot;sort&quot;],&quot;sortFn&quot;:&quot;(a2, b2) => {\n    if (!a2.isFolder &amp;&amp; !b2.isFolder || a2.isFolder &amp;&amp; b2.isFolder) {\n      return (a2.displayName || \&quot;\&quot;).localeCompare(b2.displayName || \&quot;\&quot;, void 0, {\n        numeric: true,\n        sensitivity: \&quot;base\&quot;\n      });\n    }\n    if (!a2.isFolder &amp;&amp; b2.isFolder) {\n      return 1;\n    }\n    return -1;\n  }&quot;,&quot;filterFn&quot;:&quot;(node) => node.slugSegment !== \&quot;tags\&quot;&quot;,&quot;mapFn&quot;:&quot;(node) => {\n    return node;\n  }&quot;}"><button type="button" class="explorer-toggle mobile-explorer hide-until-loaded" data-mobile="true" aria-controls="explorer-100" aria-label="探索"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide-menu"><line x1="4" x2="20" y1="12" y2="12"></line><line x1="4" x2="20" y1="6" y2="6"></line><line x1="4" x2="20" y1="18" y2="18"></line></svg></button><button type="button" class="title-button explorer-toggle desktop-explorer" data-mobile="false" aria-expanded="true"><h2>探索</h2><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="5 8 14 8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="fold"><polyline points="6 9 12 15 18 9"></polyline></svg></button><div id="explorer-100" class="explorer-content" aria-expanded="false" role="group"><ul class="explorer-ul overflow" id="list-0"><li class="overflow-end"></li></ul></div><template id="template-file"><li><a href="#" class="nav-file-title tree-item-self"></a></li></template><template id="template-folder"><li><div class="folder-container nav-folder-title tree-item-self"><svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="5 8 14 8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="folder-icon nav-folder-collapse-indicator collapse-icon"><polyline points="6 9 12 15 18 9"></polyline></svg><div><button class="folder-button"><span class="folder-title"></span></button></div></div><div class="folder-outer"><ul class="content tree-item-children"></ul></div></li></template></div></div><div class="center"><div class="page-header"><div class="popover-hint"><nav class="breadcrumb-container" aria-label="breadcrumbs"><div class="breadcrumb-element"><a href="../../">Home</a><p> ❯ </p></div><div class="breadcrumb-element"><a href="../../wiki/">wiki</a><p> ❯ </p></div><div class="breadcrumb-element"><a href="../../wiki/industries/">industries</a><p> ❯ </p></div><div class="breadcrumb-element"><a href>数据中心交换机与超节点网络</a></div></nav><h1 class="article-title">数据中心交换机与超节点网络</h1><details class="note-properties metadata-container" open data-collapsed="false"><summary class="note-properties-header"><span class="note-properties-title">Properties</span><span class="note-properties-count">2</span></summary><table class="note-properties-table"><tbody><tr class="note-properties-row metadata-property"><td class="note-properties-key metadata-property-key">tags</td><td class="note-properties-value metadata-property-value"><span class="note-properties-tags"><a href="../../tags/数据中心交换机" class="internal internal-link tag-link">数据中心交换机</a><span class="note-properties-separator">, </span><a href="../../tags/超级节点" class="internal internal-link tag-link">超级节点</a><span class="note-properties-separator">, </span><a href="../../tags/scale-up" class="internal internal-link tag-link">scale-up</a><span class="note-properties-separator">, </span><a href="../../tags/scale-out" class="internal internal-link tag-link">scale-out</a><span class="note-properties-separator">, </span><a href="../../tags/以太网" class="internal internal-link tag-link">以太网</a><span class="note-properties-separator">, </span><a href="../../tags/交换芯片" class="internal internal-link tag-link">交换芯片</a><span class="note-properties-separator">, </span><a href="../../tags/51.2t" class="internal internal-link tag-link">51.2t</a><span class="note-properties-separator">, </span><a href="../../tags/800g" class="internal internal-link tag-link">800g</a><span class="note-properties-separator">, </span><a href="../../tags/国产替代" class="internal internal-link tag-link">国产替代</a></span></td></tr><tr class="note-properties-row metadata-property"><td class="note-properties-key metadata-property-key">aliases</td><td class="note-properties-value metadata-property-value"><span class="note-properties-list"><span class="note-properties-text">数据中心交换机</span><span class="note-properties-separator">, </span><span class="note-properties-text">AI交换机</span><span class="note-properties-separator">, </span><span class="note-properties-text">国产交换机</span><span class="note-properties-separator">, </span><span class="note-properties-text">超级节点网络</span><span class="note-properties-separator">, </span><span class="note-properties-text">超节点网络</span><span class="note-properties-separator">, </span><span class="note-properties-text">Scale-up网络</span><span class="note-properties-separator">, </span><span class="note-properties-text">Scale-out网络</span></span></td></tr></tbody></table></details><p show-comma="true" class="content-meta"><time datetime="2026-07-22T16:00:00.000Z">2026年7月23日</time><span>11分钟阅读</span></p></div></div><article class="popover-hint"><div class="markdown-preview-view markdown-rendered"><h1 id="数据中心交换机与超节点网络">数据中心交换机与超节点网络<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#数据中心交换机与超节点网络" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h1>
+<p>AI 数据中心网络分为节点内/柜内高带宽、低时延的 <strong>Scale-up</strong> 与跨服务器/跨机柜扩展集群规模的 <strong>Scale-out</strong>。二者都可能采用以太网，但在时延、散热、芯片型号、端口密度和 GPU 私有协议适配上并非同一种产品。</p>
+<blockquote>
+<p>当前专门量化国内交换机部署的唯一来源为 2026-07-22 未署名纪要，<code>source_quality: unknown</code>。所有客户配置、市场份额、价格与出货预测均待公告、招标或持牌机构研报交叉验证。</p>
+</blockquote>
+<h2 id="产业链地图与环节关系">产业链地图与环节关系<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#产业链地图与环节关系" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<pre><code>云厂商 AI Capex / GPU 集群部署
+  ├─ Scale-up：GPU/加速卡 ↔ 柜内交换机 ↔ 超节点
+  │    低至数百纳秒时延、液冷、高价交换 ASIC、GPU 私有协议适配
+  └─ Scale-out：8卡/16卡服务器 ↔ TOR/Spine 交换机 ↔ 跨机柜集群
+       微秒级时延、风冷为主、200G/400G 主流并向 800G 升级
+            ↓
+交换芯片/SerDes（[[博通]]、[[盛科通信]]、中兴微电子）
+            ↓
+交换机设计与制造（[[新华三]]及其他品牌/ODM）
+            ↓
+光模块/CPO（[[CPO与光通信]]）+ PCB/材料（[[PCB与封装基板]]）+ 液冷（[[液冷]]）
+</code></pre>
+<p>本主题是 <a href="../../wiki/industries/ai算力产业链" class="internal internal-link alias" data-slug="wiki/industries/ai算力产业链">AI算力产业链</a> 的网络设备子环节，并与 <a href="../../wiki/industries/光电集成与价值量迁移" class="internal internal-link alias" data-slug="wiki/industries/光电集成与价值量迁移">光电集成与价值量迁移</a>、<a href="../../wiki/industries/光模块设备与测试" class="internal internal-link alias" data-slug="wiki/industries/光模块设备与测试">光模块设备与测试</a> 相连。</p>
+<h2 id="scale-up-与-scale-out-对比">Scale-up 与 Scale-out 对比<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#scale-up-与-scale-out-对比" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="table-container"><table><thead><tr><th>维度</th><th>Scale-up</th><th>Scale-out</th></tr></thead><tbody><tr><td>主要连接</td><td>超节点内 GPU/加速卡</td><td>服务器、机柜与集群</td></tr><tr><td>2026Q2 纪要结构</td><td>约 4,000–5,000 台，占比较小</td><td>AI 交换机约占 90%</td></tr><tr><td>主流端口</td><td>纪要强调 51.2T 交换容量、面向 800G 端口的超节点芯片</td><td>200G、400G 为主，个别 800G；推理亦用 100G/25G</td></tr><tr><td>时延</td><td>纳秒级，例如数百纳秒</td><td>微秒级即可满足</td></tr><tr><td>散热</td><td>液冷要求更高</td><td>传统风冷较多</td></tr><tr><td>芯片价格</td><td>Tomahawk 等约 1万–1.5 万美元</td><td>大批量约 6,000–7,000 美元</td></tr><tr><td>2027 出货判断</td><td>纪要预计翻倍</td><td>纪要预计 +20%–30%</td></tr></tbody></table></div>
+<p>以上均为 2026-07-22 纪要口径；“芯片型号—端口速率—架构”并非一一对应，应以具体设备 BOM 与网络拓扑为准。</p>
+<h2 id="云厂商配置差异">云厂商配置差异<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#云厂商配置差异" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="table-container"><table><thead><tr><th>客户 / 方案</th><th style="text-align:right;">GPU</th><th style="text-align:right;">交换机</th><th style="text-align:right;">GPU:交换机</th></tr></thead><tbody><tr><td><a href="../../阿里巴巴" class="internal internal-link alias" data-slug="阿里巴巴">阿里巴巴</a>“磐久 128”</td><td style="text-align:right;">128</td><td style="text-align:right;">16</td><td style="text-align:right;">8:1</td></tr><tr><td><a href="../../腾讯" class="internal internal-link alias" data-slug="腾讯">腾讯</a></td><td style="text-align:right;">64</td><td style="text-align:right;">8</td><td style="text-align:right;">8:1</td></tr><tr><td><a href="../../字节跳动" class="internal internal-link alias" data-slug="字节跳动">字节跳动</a></td><td style="text-align:right;">72</td><td style="text-align:right;">12</td><td style="text-align:right;">6:1</td></tr></tbody></table></div>
+<blockquote>
+<p>⚠️ 原文同页另有“字节 72 套”的冲突表述；因与后文 72 GPU/12 交换机、6:1 无法同时成立，本页只保留可勾稽的 12 台口径。</p>
+</blockquote>
+<p>配置差异意味着“GPU 数量 × 固定交换机系数”容易失真。市场规模应至少拆成：客户机柜数、每柜 GPU、每柜交换机、Scale-up/Scale-out 结构、端口速率和冗余策略。</p>
+<h2 id="国内市场口头测算与自校验">国内市场口头测算与自校验<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#国内市场口头测算与自校验" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<p>2026-07-22 纪要以主要云厂商 6,000–7,000 个机柜、平均 12 台交换机/柜，估算 7万–8 万台；再加二线互联网公司约 1,000–2,000 个机柜，给出约 10 万台国内市场。若二线同样按 12 台/柜，严格复算为 <strong>8.4万–10.8 万台</strong>，与“约 10 万台”相容。</p>
+<p>受访方自称约占 1/4、出货超过 2 万台；按上述区间复算为 <strong>2.1万–2.7 万台</strong>。由于受访方身份和统计周期未披露，该份额只能作为待验证线索。</p>
+<h3 id="测算假设链">测算假设链<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#测算假设链" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<ul>
+<li>假设 1：主要与二线云厂商机柜数合计 7,000–9,000 个。</li>
+<li>假设 2：平均每柜 12 台交换机；实际客户方案约 8–16 台，字节纪要口径为 12 台。</li>
+<li>假设 3：机柜与交换机统计周期一致，且没有重复计入 Scale-up/Scale-out 设备。</li>
+<li>假设 4：2027 年超节点机柜由约 1 万增至约 2 万，Scale-up 交换机随之翻倍。</li>
+<li>假设 5：高速化带来的结构提升大于常规型号每年几个百分点的降价。</li>
+</ul>
+<h2 id="速率容量与价格锚">速率、容量与价格锚<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#速率容量与价格锚" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="table-container"><table><thead><tr><th>指标</th><th style="text-align:right;">2026-07-22 纪要口径</th><th>备注</th></tr></thead><tbody><tr><td>2026H1 全部交换机</td><td style="text-align:right;">9 万多台</td><td>受访方口径</td></tr><tr><td>低于 100G</td><td style="text-align:right;">约 5 万台</td><td>受访方口径</td></tr><tr><td>400G</td><td style="text-align:right;">约 2 万台</td><td>高速部分占比最高</td></tr><tr><td>200G / 100G / 800G</td><td style="text-align:right;">约 8,000–9,000 / 8,000 / 2,000+ 台</td><td>速率分项为约数</td></tr><tr><td>25.6T / 51.2T 整机单价</td><td style="text-align:right;">10 万元出头 / 20 多万元</td><td>未披露配置、客户与税费口径</td></tr><tr><td>综合 ASP</td><td style="text-align:right;">2025 约 4 万元 → 2026 约 6.3 万元</td><td>结构升级与器件涨价驱动</td></tr></tbody></table></div>
+<p>速率分项与 Scale-up/Scale-out 是重叠分类，不能简单相加。51.2T 也可配置 128×400G，不等于只能用于 800G 端口。</p>
+<h2 id="交换芯片格局与国产替代">交换芯片格局与国产替代<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#交换芯片格局与国产替代" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<h3 id="博通性能与供给双重锚">博通：性能与供给双重锚<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#博通性能与供给双重锚" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<p><a href="../../博通" class="internal internal-link alias" data-slug="博通">博通</a>仍是主流指定方案。纪要称超节点主要采购 51.2T 交换容量、面向 800G 端口的芯片，价格约 1 万美元、部分现货更高，交期通常超过一年；Scale-up Tomahawk 芯片约 1万–1.5 万美元，Scale-out 芯片大批量约 6,000–7,000 美元。</p>
+<p>长交期为国产方案提供窗口，但博通 102.4T Tomahawk 6 与 CPO 的领先路线意味着国产替代同时面对追赶速度和下一代产品迁移。</p>
+<h3 id="盛科从双芯拼接到单芯-512t">盛科：从双芯拼接到单芯 51.2T<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#盛科从双芯拼接到单芯-512t" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<ul>
+<li><a href="../../盛科通信" class="internal internal-link alias" data-slug="盛科通信">盛科通信</a> 25.6T 已获部分互联网公司试用；纪要称阿里用两颗 25.6T 封装实现 51.2T，用于 Scale-up 验证。</li>
+<li>2026 年主要云厂商出货预计 4,000 多颗，其中阿里数千颗、腾讯与字节各数百颗。</li>
+<li>51.2T 已向阿里、新华三等送样，纪要预计 2027 年才可能真正放量。</li>
+<li>切入理由不仅是博通交期，也包括配合阿里 A-Link 做定制开发。</li>
+</ul>
+<h3 id="适配壁垒">适配壁垒<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#适配壁垒" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<p>国产芯片并非参数达标即可替换。GPU 厂商可能在以太网基础上叠加私有协议或技术，交换芯片需逐一完成接口对齐、协议适配和互通验证。需要跟踪的不是“是否发布样片”，而是：适配哪些 GPU、完成哪些客户认证、批量良率、系统功耗/时延和真实出货。</p>
+<h2 id="竞争格局与核心争议">竞争格局与核心争议<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#竞争格局与核心争议" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<blockquote>
+<p>⚠️ <strong>需求争议</strong>：纪要预计 2027 年超节点机柜翻倍、Scale-up 交换机翻倍，但没有云厂商订单或 Capex 到设备量的底稿。</p>
+</blockquote>
+<blockquote>
+<p>⚠️ <strong>国产化争议</strong>：双 25.6T 封装可实现名义 51.2T，但成本、功耗、时延、软件适配和良率可能与单芯 51.2T 不同，不能只按带宽等同。</p>
+</blockquote>
+<blockquote>
+<p>⚠️ <strong>价格争议</strong>：原文用 Scale-out 51.2T“代工成本 20 多万元”对比 Scale-up“价格 30 多万–40 万元”，分母不同，不能据此推算毛利率。</p>
+</blockquote>
+<blockquote>
+<p>⚠️ <strong>竞争争议</strong>：参与者可能从约 4 家增至接近 10 家；高速化提升 ASP 的同时，常规 100G/200G/400G 产品仍有每年几个百分点的降价压力。</p>
+</blockquote>
+<h2 id="待验证的催化剂">待验证的催化剂<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#待验证的催化剂" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<ul class="contains-task-list">
+<li class="task-list-item" data-task=" "><input type="checkbox" class="checkbox-toggle"/> 主要云厂商披露超节点机柜与交换机招标量、Scale-up 占比。</li>
+<li class="task-list-item" data-task=" "><input type="checkbox" class="checkbox-toggle"/> 博通 51.2T 芯片交期从一年以上回落或价格松动。</li>
+<li class="task-list-item" data-task=" "><input type="checkbox" class="checkbox-toggle"/> 盛科 25.6T 在 2026 年主要云厂商出货达到 4,000 多颗。</li>
+<li class="task-list-item" data-task=" "><input type="checkbox" class="checkbox-toggle"/> 盛科 51.2T 完成阿里/新华三验证，2027 年进入批量部署。</li>
+<li class="task-list-item" data-task=" "><input type="checkbox" class="checkbox-toggle"/> 国产芯片披露适配 GPU 厂商、互通认证、功耗/时延与量产良率。</li>
+<li class="task-list-item" data-task=" "><input type="checkbox" class="checkbox-toggle"/> 2027 年超节点约 2 万机柜、Scale-up 翻倍、Scale-out 增长 20%–30%。</li>
+<li class="task-list-item" data-task=" "><input type="checkbox" class="checkbox-toggle"/> 新进入者取得真实客户认证与订单；常规型号降价未吞噬结构升级。</li>
+</ul>
+<h2 id="研报时间线">研报时间线<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#研报时间线" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="table-container"><table><thead><tr><th>report_date</th><th>机构</th><th>类型</th><th>评级</th><th>核心观点</th><th>卡片</th></tr></thead><tbody><tr><td>2026-07-22*</td><td>未标注（调研纪要）</td><td>调研纪要</td><td>—</td><td>2027 年超节点/Scale-up 或翻倍；博通长交期与定制缺口给国产芯片验证窗口，但 GPU 适配和竞争扩容决定兑现</td><td><a href="../../wiki/reports/2026-07-22-国产交换机-未知来源-超节点与数据中心交换机纪要" class="internal internal-link alias" data-slug="wiki/reports/2026-07-22-国产交换机-未知来源-超节点与数据中心交换机纪要">2026-07-22-国产交换机-未知来源-超节点与数据中心交换机纪要</a></td></tr></tbody></table></div>
+<p>* 原文未标报告日，取 PDF 元数据创建日；来源质量为 unknown。</p>
+<h2 id="相关">相关<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#相关" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<ul>
+<li>上位产业链：<a href="../../wiki/industries/ai算力产业链" class="internal internal-link alias" data-slug="wiki/industries/ai算力产业链">AI算力产业链</a></li>
+<li>相邻环节：<a href="../../wiki/industries/cpo与光通信" class="internal internal-link alias" data-slug="wiki/industries/cpo与光通信">CPO与光通信</a> · <a href="../../wiki/industries/光电集成与价值量迁移" class="internal internal-link alias" data-slug="wiki/industries/光电集成与价值量迁移">光电集成与价值量迁移</a> · <a href="../../wiki/industries/光模块设备与测试" class="internal internal-link alias" data-slug="wiki/industries/光模块设备与测试">光模块设备与测试</a> · <a href="../../wiki/industries/pcb与封装基板" class="internal internal-link alias" data-slug="wiki/industries/pcb与封装基板">PCB与封装基板</a> · <a href="../../液冷" class="internal internal-link alias" data-slug="液冷">液冷</a></li>
+<li>已建公司页：<a href="../../博通" class="internal internal-link alias" data-slug="博通">博通</a></li>
+<li>待门槛实体：<a href="../../盛科通信" class="internal internal-link alias" data-slug="盛科通信">盛科通信</a> · <a href="../../新华三" class="internal internal-link alias" data-slug="新华三">新华三</a> · <a href="../../阿里巴巴" class="internal internal-link alias" data-slug="阿里巴巴">阿里巴巴</a> · <a href="../../腾讯" class="internal internal-link alias" data-slug="腾讯">腾讯</a> · <a href="../../字节跳动" class="internal internal-link alias" data-slug="字节跳动">字节跳动</a> · <a href="../../中兴通讯" class="internal internal-link alias" data-slug="中兴通讯">中兴通讯</a></li>
+</ul>
+<blockquote>
+<p>当前仅一篇未知来源纪要，以上为观点档案，不构成投资建议。</p>
+</blockquote></div></article><hr/><div class="page-footer"></div></div><div class="right sidebar"><div class="graph"><h3>关系图谱</h3><div class="graph-outer"><div class="graph-container" data-cfg="{&quot;drag&quot;:true,&quot;zoom&quot;:true,&quot;depth&quot;:1,&quot;scale&quot;:1.1,&quot;repelForce&quot;:0.5,&quot;centerForce&quot;:0.3,&quot;linkDistance&quot;:30,&quot;fontSize&quot;:0.6,&quot;opacityScale&quot;:1,&quot;showTags&quot;:true,&quot;removeTags&quot;:[],&quot;focusOnHover&quot;:false,&quot;enableRadial&quot;:false}"></div><button class="global-graph-icon" aria-label="Global Graph"><svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 55 55" fill="currentColor" xml:space="preserve"><path d="M49,0c-3.309,0-6,2.691-6,6c0,1.035,0.263,2.009,0.726,2.86l-9.829,9.829C32.542,17.634,30.846,17,29,17
+                s-3.542,0.634-4.898,1.688l-7.669-7.669C16.785,10.424,17,9.74,17,9c0-2.206-1.794-4-4-4S9,6.794,9,9s1.794,4,4,4
+                c0.74,0,1.424-0.215,2.019-0.567l7.669,7.669C21.634,21.458,21,23.154,21,25s0.634,3.542,1.688,4.897L10.024,42.562
+                C8.958,41.595,7.549,41,6,41c-3.309,0-6,2.691-6,6s2.691,6,6,6s6-2.691,6-6c0-1.035-0.263-2.009-0.726-2.86l12.829-12.829
+                c1.106,0.86,2.44,1.436,3.898,1.619v10.16c-2.833,0.478-5,2.942-5,5.91c0,3.309,2.691,6,6,6s6-2.691,6-6c0-2.967-2.167-5.431-5-5.91
+                v-10.16c1.458-0.183,2.792-0.759,3.898-1.619l7.669,7.669C41.215,39.576,41,40.26,41,41c0,2.206,1.794,4,4,4s4-1.794,4-4
+                s-1.794-4-4-4c-0.74,0-1.424,0.215-2.019,0.567l-7.669-7.669C36.366,28.542,37,26.846,37,25s-0.634-3.542-1.688-4.897l9.665-9.665
+                C46.042,11.405,47.451,12,49,12c3.309,0,6-2.691,6-6S52.309,0,49,0z M11,9c0-1.103,0.897-2,2-2s2,0.897,2,2s-0.897,2-2,2
+                S11,10.103,11,9z M6,51c-2.206,0-4-1.794-4-4s1.794-4,4-4s4,1.794,4,4S8.206,51,6,51z M33,49c0,2.206-1.794,4-4,4s-4-1.794-4-4
+                s1.794-4,4-4S33,46.794,33,49z M29,31c-3.309,0-6-2.691-6-6s2.691-6,6-6s6,2.691,6,6S32.309,31,29,31z M47,41c0,1.103-0.897,2-2,2
+                s-2-0.897-2-2s0.897-2,2-2S47,39.897,47,41z M49,10c-2.206,0-4-1.794-4-4s1.794-4,4-4s4,1.794,4,4S51.206,10,49,10z"></path></svg></button></div><div class="global-graph-outer"><div class="global-graph-container" data-cfg="{&quot;drag&quot;:true,&quot;zoom&quot;:true,&quot;depth&quot;:-1,&quot;scale&quot;:0.9,&quot;repelForce&quot;:0.5,&quot;centerForce&quot;:0.2,&quot;linkDistance&quot;:30,&quot;fontSize&quot;:0.6,&quot;opacityScale&quot;:1,&quot;showTags&quot;:true,&quot;removeTags&quot;:[],&quot;focusOnHover&quot;:true,&quot;enableRadial&quot;:true}"></div></div></div><div class="toc"><button type="button" class="toc-header" aria-controls="toc-99" aria-expanded="true"><h3>目录</h3><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="fold"><polyline points="6 9 12 15 18 9"></polyline></svg></button><ul id="list-0" class="toc-content overflow"><li class="depth-0"><a href="#数据中心交换机与超节点网络" data-for="数据中心交换机与超节点网络">数据中心交换机与超节点网络</a></li><li class="depth-1"><a href="#产业链地图与环节关系" data-for="产业链地图与环节关系">产业链地图与环节关系</a></li><li class="depth-1"><a href="#scale-up-与-scale-out-对比" data-for="scale-up-与-scale-out-对比">Scale-up 与 Scale-out 对比</a></li><li class="depth-1"><a href="#云厂商配置差异" data-for="云厂商配置差异">云厂商配置差异</a></li><li class="depth-1"><a href="#国内市场口头测算与自校验" data-for="国内市场口头测算与自校验">国内市场口头测算与自校验</a></li><li class="depth-2"><a href="#测算假设链" data-for="测算假设链">测算假设链</a></li><li class="depth-1"><a href="#速率容量与价格锚" data-for="速率容量与价格锚">速率、容量与价格锚</a></li><li class="depth-1"><a href="#交换芯片格局与国产替代" data-for="交换芯片格局与国产替代">交换芯片格局与国产替代</a></li><li class="depth-2"><a href="#博通性能与供给双重锚" data-for="博通性能与供给双重锚">博通：性能与供给双重锚</a></li><li class="depth-2"><a href="#盛科从双芯拼接到单芯-512t" data-for="盛科从双芯拼接到单芯-512t">盛科：从双芯拼接到单芯 51.2T</a></li><li class="depth-2"><a href="#适配壁垒" data-for="适配壁垒">适配壁垒</a></li><li class="depth-1"><a href="#竞争格局与核心争议" data-for="竞争格局与核心争议">竞争格局与核心争议</a></li><li class="depth-1"><a href="#待验证的催化剂" data-for="待验证的催化剂">待验证的催化剂</a></li><li class="depth-1"><a href="#研报时间线" data-for="研报时间线">研报时间线</a></li><li class="depth-1"><a href="#相关" data-for="相关">相关</a></li><li class="overflow-end"></li></ul></div><div class="backlinks"><h3>反向链接</h3><ul id="list-0" class="overflow"><li><a href="../../" class="internal">index</a></li><li><a href="../../wiki/companies/博通" class="internal">博通</a></li><li><a href="../../wiki/" class="internal">wiki</a></li><li><a href="../../wiki/industries/ai算力产业链" class="internal">AI算力产业链</a></li><li><a href="../../wiki/log" class="internal">log</a></li><li class="overflow-end"></li></ul></div></div><footer class><p>Created with <a href="https://quartz.jzhao.xyz/">Quartz v5.0.0</a> © 2026</p><ul><li><a href="https://github.com/jackyzha0/quartz">GitHub</a></li><li><a href="https://discord.gg/cRFFHYye7t">Discord Community</a></li></ul></footer></div></div></body><script src="../../static/resource-after-e13fffa1.js" type="application/javascript" data-persist="true"></script><script src="../../static/resource-after-8b336f9a.js" type="application/javascript" data-persist="true"></script><script src="../../static/resource-after-baba652b.js" type="application/javascript" data-persist="true"></script><script src="../../static/resource-after-5eb75950.js" type="module" data-persist="true"></script><script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/copy-tex.min.js" type="application/javascript" data-persist="true"></script><script src="../../postscript-9275baab.js" type="module" data-persist="true"></script></html>
